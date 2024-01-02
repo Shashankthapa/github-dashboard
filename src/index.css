@@ -4,13 +4,14 @@ body{
   margin : 0px;
 }
 
+
 #navbar{
   display : flex;
   background : transparent;
   padding : 10px;
   justify-content: flex-end;
   border : 1px solid grey;
-  height : 45px;
+  height : auto;
 }
 
 
@@ -21,7 +22,6 @@ body{
 
 .flex-start{
   color : white;
-  margin : 20px;
 }
 
 .flex-end{
@@ -51,6 +51,8 @@ body{
 }
 
 .flex-start{
+  display : flex;
+  flex-direction: row;
   justify-content: flex-start;
   width : 60%;
   align-items: center;
@@ -75,6 +77,7 @@ body{
   border : 1px solid darkslategray;
   border-radius: 5px;
   align-items: center;
+  height : fit-content;
 }
 
 #select{
@@ -87,7 +90,7 @@ body{
 
 #plus-icon{
   background-color: transparent;
-  margin : auto auto auto 10px;
+  padding : 10px;
   color : white;
 }
 
@@ -108,11 +111,9 @@ body{
 
 
 #div-left{
-  display : inline-block;
   width : 70%;  
   background-color : #0D1117;
   color : white;
-  min-height: 100vh;
   padding : 20px;
   border : 1px solid grey;
 }
@@ -120,17 +121,22 @@ body{
 .heading-search-repo{
   font-size: 0.8rem;
   font-weight: bold;
-  margin-right: 2rem;
-  margin-top: 1.2rem;
+
 }
+
+.heading-search-repo-wrapper{
+  display : flex;
+  align-items: flex-end;
+  width : 50%;
+}
+
 
 #find-repo-text{
   margin-top : 15px;
-  width : 95%;
-  height : 25px;
+  width : 92%;
   border-radius : 5px;
   border : none;
-  padding : 5px;
+  padding : 10px;
 }
 
 #recent-activity-heading{
@@ -152,9 +158,16 @@ body{
   border : none;
   color : #fff;
   border-radius: 5px;
-  margin-left : 32%;
-  margin-top : 10px;  
+  padding : 5px;
 }
+
+.new-repo-container-wrapper{
+  display : flex;
+  justify-content: flex-end;
+  width : 50%;
+  margin : 15px 0 0 0;
+}
+
 
 #floppy-icon{
   padding-right : 0px;
@@ -178,7 +191,10 @@ body{
 }
 
 .links{
-  padding : 10px;
+  line-height : 1.5;
+  font-size: small;
+  display : flex; 
+  padding : 2px 0 2px 0;
 }
 
 #small-face{
@@ -198,11 +214,10 @@ body{
 
 .home-updates-container{
   color : white;
-  margin-left : 0px;
-  width : 57%;
 }
 
 .heading{
+  margin : 10px;
   display : flex;
   align-items : center ;
 }
@@ -274,30 +289,22 @@ body{
 }
 
 .updates-homepage-feed,.user-updates,.trending-updates{
-  width : 98%;
-  height: 25%;
   background : var(--light-grad-pink-blue, radial-gradient(ellipse at 40% 0%, #bf398910 0, transparent 75%), radial-gradient(ellipse at 60% 0%, #096bde10 0, transparent 75%));
-  margin : 10px;
+  margin : 15px 10px;
   border-radius: 5px;
   color : white;
   border : 1px solid grey;
   font-size: 0.9rem;
 }
 
-.updates-homepage-feed{
-  height : 15%;
-}
-
 .trending-updates{
   display : flex;
   flex-direction: column;
-  height: 55vh;
   background-color: #0D1117;
 }
 
 .user-updates{
   background-color: #0D1117;
-  height : 20%;
 }
 
 .updates-heading,.user-heading{
@@ -349,6 +356,8 @@ body{
   width: 85%;
   margin : auto;
   border-radius : 5px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .user-content-desc{
@@ -406,7 +415,7 @@ body{
 }
 
 #trending-img{
-  height : 20px;
+  width : 3%;
   filter : invert(100%);
   color : white;
 }
@@ -546,28 +555,24 @@ body{
 }
 
 .github-footer-icon-logo{
+  width : 100%;
   display: flex;
   padding-left : 20px;
 }
 
 .footer-links-wrapper{
   display : flex;
-  align-content: center;
-  margin : 100px 0 0 150px;
+  width : 100%;
+  padding : 100px 100px 0 0;
 }
 
 .footer-links{
   margin-left : 10%;
 }
 
-.links{
-  line-height: 0.2;
-  font-size: small;
-}
-
 .contact-github-link{
   font-size : small;
-  margin-left : 10px;
+  width:50%;
 }
 
 .copyright-icon{
@@ -616,6 +621,7 @@ body{
 
 
 .search-repository-heading{
+  width : 100%;
   display : flex;
 }
 
@@ -623,11 +629,11 @@ body{
   display : flex;
   align-items : center;
   background-color: transparent;
-  height: 75%;
+  width: 60%;
+  height : fit-content;
   margin-top: 6px;
   border : 1px solid darkslategrey;
   border-radius: 5px;
-  width: 60%;
 }
 
 #magnifing-icon{
@@ -637,7 +643,7 @@ body{
 
 #palette-icon{
   filter: invert(100%);
-  height: 50%;
+  width : 5%;
   margin-left:10px;
 }
 
@@ -652,11 +658,6 @@ body{
   border-width : 0 1px 0 0;
   border-style : solid;
   border-color: white;
-  height : 50%;
-}
-
-#msg-search-desc{
-  
 }
 
 .demo-img{

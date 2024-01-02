@@ -3,15 +3,18 @@ const Datacontent = () => {
 		<div id="container">
 			<div id="div-left">
 				<div class = "search-repository-heading">
-					<span class="heading-search-repo">Top Repositories</span>
-					<div class="new-repo-container">
-						<i class="new-repo-image fa-solid fa-floppy-disk"></i>
-						<input class="new-repo-button" type="button" value="new"></input>
+					<div class = "heading-search-repo-wrapper">
+						<span class="heading-search-repo">Top Repositories</span>
+					</div>
+					<div class = "new-repo-container-wrapper">
+						<div class="new-repo-container">
+							<i class="new-repo-image fa-solid fa-floppy-disk"></i>
+							<input class="new-repo-button" type="button" value="New"></input>
+						</div>
 					</div>
 				</div>
 				<input id="find-repo-text" type="text" placeholder="Find a repository.." />
 				<div class="links">
-					
 					<img class = "demo-img" src = "https://avatars.githubusercontent.com/u/77850077?s=40&v=4"></img>
 					<a href="https://www.google.com">Shashankthapa/demo-repo</a>
 				</div>

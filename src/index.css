@@ -5,37 +5,12 @@ body{
 }
 
 
-#navbar{
-  display : flex;
+.navbar{
   background : transparent;
   padding : 10px;
   justify-content: flex-end;
   border : 1px solid grey;
   height : auto;
-}
-
-
-.flex-end,.flex-start{
-  display : flex;
-  justify-content: center;
-}
-
-.flex-start{
-  color : white;
-}
-
-.flex-end{
-  width : 45%;
-}
-
-.search-icon{
-  top : 20px;
-  position : absolute;
-}
-
-.text{
-  position : relative;
-  margin-top : 10px;
 }
 
 .hamburger-menu-container,.github-icon-container,.dashboard-label-container{
@@ -68,7 +43,6 @@ body{
 
 .face-nav{
   margin-left : 8px;
-  margin-top : 5px
 }
 
 .nav-link{
@@ -76,7 +50,6 @@ body{
   display : flex;
   border : 1px solid darkslategray;
   border-radius: 5px;
-  align-items: center;
   height : fit-content;
 }
 
@@ -104,14 +77,7 @@ body{
   margin-top : 9px;
 }
 
-
-#container{
-  display : flex;
-}
-
-
-#div-left{
-  width : 70%;  
+.all-repository-container{
   background-color : #0D1117;
   color : white;
   padding : 20px;
@@ -132,11 +98,16 @@ body{
 
 
 #find-repo-text{
-  margin-top : 15px;
-  width : 92%;
+  /* margin-top : 15px; */
   border-radius : 5px;
   border : none;
-  padding : 10px;
+}
+
+.repo-links{
+  display : flex;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 0.8rem;
 }
 
 #recent-activity-heading{
@@ -158,7 +129,6 @@ body{
   border : none;
   color : #fff;
   border-radius: 5px;
-  padding : 5px;
 }
 
 .new-repo-container-wrapper{
@@ -177,11 +147,6 @@ body{
   position : absolute;
 }
 
-.new-repo-image{
-  height : 1rem;
-  margin : auto;
-  padding-left : 5px; 
-}
 
 .new-repo-button{
   border-radius: 5px;
@@ -218,8 +183,6 @@ body{
 
 .heading{
   margin : 10px;
-  display : flex;
-  align-items : center ;
 }
 
 .filter-img{
@@ -265,21 +228,11 @@ body{
   margin: 20px 100px ;
 }
 
-#heading-m{
-  margin:15px;
-  font-size: larger;
-  font-weight: 600;
-}
-
 .feedback-container{
   font-size: 15px;
   font-weight: 600;
   margin : 0 0 0 360px;
   color : blue;
-}
-
-.feedback-link{
-  width: 120px;
 }
 
 
@@ -464,7 +417,7 @@ body{
   background-color: #0D1117;
   margin : 30px 15px;
   color : white;
-  width : 90%;
+  /* width : 90%; */
   border : 1px solid grey;
   background-size: cover;
   border-radius: 5px;
@@ -495,6 +448,24 @@ body{
 
 .changes-week,.dot{
   display : inline-block;
+}
+
+.changes-link-wrapper{
+  display : flex;
+  align-items : center;
+}
+
+#changes-link{
+  font-size : 0.8rem;
+  text-decoration: none;
+  padding-right: 10px;
+  color : grey;  
+}
+
+.list-repo-link-container{
+  display : flex;
+  align-items : center;
+  padding : 10px 0;
 }
 
 .dot{
@@ -548,11 +519,30 @@ body{
   margin : 15px;
 }
 
-#footer-center{
-  margin-top: 20%;
+.footer-center{
+  margin-top: 10%;
   display : flex;
   align-items: center;
 }
+
+@media (min-width : 775px){
+  .footer-center{
+    display : flex;
+  }
+  .footer-center-breakpoint{
+    display : none;
+  }
+}
+
+@media(max-width : 776px){
+  .footer-center{
+    display : none;
+  }
+  .footer-center-breakpoint{
+    display : flex;
+  }
+}
+
 
 .github-footer-icon-logo{
   width : 100%;
@@ -586,12 +576,6 @@ body{
   margin : 20px 0 5px 20px;
 }
 
-.list-repo-heading-container{
-  display : flex;
-  align-items: center;
-  margin : 10px 0 10px 10px;
-}
-
 .list-repo-heading-link{
   text-decoration: none;
   font-size: 0.9rem;
@@ -615,6 +599,16 @@ body{
   padding-bottom: 20px;
 }
 
+.list-repo-star{
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: grey;
+}
+
+.list-repo-explore{
+  color : blue;
+}
+
 .lang-img,.rating-no,.star-icon{
   margin : 5px;
 }
@@ -629,32 +623,44 @@ body{
   display : flex;
   align-items : center;
   background-color: transparent;
-  width: 60%;
-  height : fit-content;
-  margin-top: 6px;
   border : 1px solid darkslategrey;
   border-radius: 5px;
 }
+
+@media (max-width : 1215px){
+  .search{
+    display : none;
+  }
+  .magnifing-container{
+    display : block;
+  } 
+}
+
+@media (min-width : 1215px){
+  .search{
+    display : flex;
+  }
+  .magnifing-container{
+    display : none;
+  }
+}
+
 
 #magnifing-icon{
   margin: 10px;
   color : white;
 }
 
-#palette-icon{
+.palette-icon{
   filter: invert(100%);
-  width : 5%;
-  margin-left:10px;
 }
 
 #search-nav-user-inp{
   width: 190px;
 }
 
-#msg-search-nav{
-  font-size: 0.9rem;
-  color : white;
-  width : 75%;
+.msg-search-nav{
+  width: 100%;
   border-width : 0 1px 0 0;
   border-style : solid;
   border-color: white;
@@ -692,6 +698,12 @@ body{
   margin : auto;
 }
 
+.repo-line-last{
+  border-width: 1px 0 0 0;
+  border-style : solid;
+  border-color : grey;
+}
+
 .lang-img{
   background-color: red;
   height: 10px;
@@ -699,7 +711,4 @@ body{
   border-radius: 50%;
 }
 
-.lang{
-  font-size: 0.8rem;
-}
 
